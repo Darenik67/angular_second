@@ -5,6 +5,21 @@ import { Component } from '@angular/core';
   templateUrl: './user-profile.component.html',
   styleUrls: ['./user-profile.component.css']
 })
-export class UserProfileComponent {
+export class UserProfileComponent {user = {
+  name : 'Doe',
+  firstName : 'John',
+  age : 25,
+  quote : '',
+  photo : 'https://randomuser.me/api/portraits/lego/2.jpg',
+  hidden:false,
+};
 
+hide(){
+  if(this.user.hidden === false){
+    this.user.hidden = true
+  }
+  else {(this.user.hidden === true)
+    this.user.hidden=false
+  }
+}
 }
